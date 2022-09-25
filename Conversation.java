@@ -18,10 +18,8 @@ class Conversation {
     ArrayList<String> transcript = new ArrayList<String>();
       transcript.add("What are you thinking about today?");
 
-    System.out.println(rounds);
 
-    for (int i = 0; i < rounds; i++) { 
-      System.out.println(i);
+    for (int i = 0; i < rounds; i++) {
       Scanner convo = new Scanner(System.in);
       String reply = convo.nextLine();
 
@@ -37,8 +35,7 @@ class Conversation {
       for (String str: mirrored) {
         response += mirror(str);
       }
-      response.deleteCharAt(0);
-
+      response = response.substring(1, response.length());
 
       if (!response.toLowerCase().equals(reply)) {
         transcript.add(response); //Adds the new question to the transcript
@@ -95,6 +92,12 @@ public static String mirror (String word) {
     }
     if (word.equals("your")) {
       return " my";
+    }
+    if (word.equals("i'm")) {
+      return " you're";
+    }
+    if (word.equals("you're")) {
+      return " I'm";
     }
     else {
       return (" " + word);
