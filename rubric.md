@@ -14,11 +14,11 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attended
 
-_____ 1 pt: Program queries user for number of conversation rounds
+___YES__ 1 pt: Program queries user for number of conversation rounds
 
-_____ 1 pt: Program carries out requested number of conversation rounds
+___YES__ 1 pt: Program carries out requested number of conversation rounds
 
-_____ 1 pt: Allocates static array of canned responses
+___YES__ 1 pt: Allocates static array of canned responses
 
 ### Level 2 (3 pts)
 
@@ -67,3 +67,26 @@ _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 _____ 1 pt: All required files included with submission (including completed checklist file)
 
 _____ 1 pt: `reflection.md` contains your reflection on the assignment
+
+Nadira (Nadera)
+
+      if (reply.contains("i")) { 
+            for (i=0; i < (mirrored.size()-1); i++); { //Iterates through the arraylist
+              if ((mirrored.get(i)).equals("i")) {
+                System.out.println("Found an I");
+                  mirrored.set(i, "you");
+              }
+            else {
+                mirrored.add(mirrored.get(i));
+            }
+            mirrored.remove(i);
+            }
+            String mirrored_q = "";
+            for (i=0; i< mirrored.size(); i++) {
+              mirrored_q += mirrored.get(i);
+              mirrored_q += " ";
+            }
+            mirrored_q += "?";
+            System.out.println(mirrored_q);
+            transcript.add(mirrored_q);
+          }
